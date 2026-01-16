@@ -1,0 +1,168 @@
+/* styles.css */
+
+/* .root is the top-level node of every scene.
+   Styles defined here are inherited by child nodes. */
+.root {
+    /* Sets the default font family for the entire app to "Segoe UI" */
+    -fx-font-family: "Segoe UI";
+    /* Sets the background color of the entire app to white */
+    -fx-background-color: white;
+}
+
+/* Large Headings (e.g., "Hangman" in Menu) */
+.title-text {
+    -fx-font-size: 48px;     /* Very large font size */
+    -fx-font-weight: bold;   /* Bold text */
+    -fx-fill: black;         /* Font color black */
+}
+
+/* Card Design for Score and Config boxes (Container Styling) */
+.card {
+    -fx-background-color: #D3D3D3; /* Light Gray background */
+    -fx-background-radius: 20;     /* Rounds the corners of the background */
+    -fx-padding: 30;               /* Inner padding: Content doesn't stick to the edge */
+
+    /* Border definition */
+    -fx-border-color: black;       /* Black border */
+    -fx-border-width: 1px;         /* Thin line */
+    -fx-border-radius: 20;         /* Rounds the border to match the background */
+}
+
+/* Headings inside the cards */
+.card-title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: black;
+}
+
+/* Normal text/values inside the cards */
+.card-text {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: black;
+}
+
+/* Standard Button Styling */
+.button {
+    -fx-background-color: #E0E0E0; /* Light Gray */
+    -fx-text-fill: black;          /* Black Text */
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+
+    /* Radius and Border */
+    -fx-background-radius: 20;
+    -fx-border-color: black;
+    -fx-border-radius: 20;
+
+    -fx-cursor: hand;   /* Changes cursor to pointer on hover */
+    -fx-padding: 10 20; /* Padding: 10px top/bottom, 20px left/right */
+}
+
+/* Interaction: When mouse hovers over the button (:hover) */
+.button:hover {
+    -fx-background-color: #CCCCCC; /* Button becomes slightly darker */
+}
+
+/* Special Style for the "Start Game" Button (Emphasis) */
+.start-btn {
+    -fx-background-color: black;   /* Black background */
+    -fx-text-fill: white;          /* White text (Contrast) */
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+    -fx-background-radius: 10;     /* Less rounded than standard buttons */
+    -fx-padding: 10 40;            /* Wider button */
+    -fx-cursor: hand;
+}
+.start-btn:hover {
+    -fx-background-color: #333333; /* Dark Gray on hover */
+}
+
+/* Styling for RadioButtons to look like clickable rectangles */
+.config-btn {
+    -fx-background-color: #E0E0E0;
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+
+    /* Sharper corners (Radius 8 instead of 20) */
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-border-color: black;
+    -fx-border-width: 1.5px;       /* Slightly thicker border */
+
+    -fx-padding: 8 20;
+    -fx-cursor: hand;
+    -fx-min-width: 100px;          /* Minimum width for uniformity */
+    -fx-alignment: center;         /* Center text */
+}
+
+/* State: When the RadioButton is SELECTED (:selected) */
+.config-btn:selected {
+    -fx-background-color: #A9A9A9; /* Darker Gray to indicate selection */
+    -fx-text-fill: black;
+    -fx-border-width: 2px;         /* Even thicker border */
+}
+.config-btn:hover {
+    -fx-background-color: #D3D3D3;
+}
+
+/* "Pill"-shaped buttons (e.g., in Score Screen) */
+.pill-btn {
+    -fx-background-color: #E0E0E0;
+    -fx-text-fill: black;
+
+    /* High radius creates the pill shape */
+    -fx-background-radius: 30;
+    -fx-border-color: black;
+    -fx-border-radius: 30;
+    -fx-border-width: 2px;
+
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-min-width: 140px;
+    -fx-padding: 10 20;
+}
+.pill-btn:hover {
+    -fx-background-color: #CCCCCC;
+}
+
+/* Container for the game area (Drawing Pane & Keyboard) */
+.game-container {
+    -fx-background-color: #E0E0E0;
+    -fx-background-radius: 20;
+    -fx-border-color: black;
+    -fx-border-radius: 20;
+    -fx-border-width: 1.5px;
+}
+
+/* Keys of the on-screen keyboard */
+.key-button {
+    -fx-min-width: 40px;
+    -fx-min-height: 40px;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-border-color: black;
+    -fx-border-width: 1px;
+
+    -fx-background-color: #F5F5F5; /* Off-White */
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+    -fx-font-size: 15px;
+    -fx-cursor: hand;
+}
+.key-button:hover {
+    -fx-background-color: #ffffff; /* Pure White on hover */
+}
+/* State: When key has already been pressed (disabled) */
+.key-button:disabled {
+    -fx-opacity: 0.6;              /* Semi-transparent */
+    -fx-background-color: #cccccc; /* Grayed out */
+}
+
+/* Stats Labels top left (Guesses/Time) */
+.stat-label {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: black;
+}

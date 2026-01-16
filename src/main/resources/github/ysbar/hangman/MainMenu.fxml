@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" prefHeight="700.0" prefWidth="900.0" spacing="30" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="github.ysbar.hangman.controller.MenuController">
+    <stylesheets><URL value="@styles.css" /></stylesheets>
+    <Text styleClass="title-text" text="Hangman" />
+    <VBox alignment="CENTER" spacing="15">
+        <Button onAction="#handleNewGame" prefHeight="40" prefWidth="200" style="-fx-font-weight: bold;" text="New Game" />
+        <Button onAction="#handleQuit" prefHeight="40" prefWidth="200" style="-fx-font-weight: bold;" text="Quit" />
+    </VBox>
+</VBox>

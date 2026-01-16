@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<StackPane prefHeight="700.0" prefWidth="900.0" style="-fx-background-color: #ff9900;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="github.ysbar.hangman.controller.SplashController">
+    <Label fx:id="titleLabel" text="HANGMAN" textFill="WHITE">
+        <font><Font name="Segue UI" size="48.0" /></font>
+    </Label>
+</StackPane>

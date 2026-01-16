@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" prefHeight="700.0" prefWidth="900.0" spacing="50" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="github.ysbar.hangman.controller.ConfigurationController">
+    <stylesheets>
+        <URL value="@styles.css" />
+    </stylesheets>
+
+    <Text styleClass="title-text" text="Configuration" />
+
+    <GridPane alignment="CENTER" hgap="30" vgap="40">
+
+        <Label styleClass="card-title" text="Attempt Count" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+
+        <HBox spacing="15" GridPane.columnIndex="1" GridPane.rowIndex="0">
+            <RadioButton fx:id="easyRadio" selected="true" styleClass="config-btn" text="Easy">
+                <toggleGroup><ToggleGroup fx:id="attemptGroup" /></toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="mediumRadio" styleClass="config-btn" text="Medium" toggleGroup="$attemptGroup" />
+            <RadioButton fx:id="hardRadio" styleClass="config-btn" text="Hard" toggleGroup="$attemptGroup" />
+        </HBox>
+
+        <Label styleClass="card-title" text="Word Difficulty" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+
+        <HBox spacing="15" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <RadioButton fx:id="wordEasy" selected="true" styleClass="config-btn" text="Easy">
+                <toggleGroup><ToggleGroup fx:id="wordGroup" /></toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="wordMedium" styleClass="config-btn" text="Medium" toggleGroup="$wordGroup" />
+            <RadioButton fx:id="wordHard" styleClass="config-btn" text="Hard" toggleGroup="$wordGroup" />
+        </HBox>
+
+    </GridPane>
+
+    <Button onAction="#handleStartGame" styleClass="start-btn" text="Start Game" />
+
+</VBox>
